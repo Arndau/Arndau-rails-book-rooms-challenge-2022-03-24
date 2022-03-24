@@ -1,0 +1,16 @@
+
+<%= link_to rooms_path do %>
+  <i class="fas fa-arrow-left"></i>
+<% end %>
+Back to index
+
+<h2><%=@room.hotel.name%></h2>
+<h5><%= @room.price_per_night%>$/night</h5>
+<h5><%= @room.hotel.address%></h5>
+
+<div class="container">
+  <%= simple_form_for(@booking) do |f| %>
+    <%= f.input :sarts_at, as: :date%>
+    <%= f.input :ends_at, as: :date%>
+  <% end %>
+</div>
