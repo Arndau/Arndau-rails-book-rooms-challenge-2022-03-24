@@ -1,0 +1,13 @@
+index
+<div class="cardscontainer">
+  <% @rooms.each do |room| %>
+  <div class="card-product">
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+  <div class="card-product-infos">
+          <%= room.hotel.address%>
+          <%= room.price_per_night %>
+        </div>
+          <%= link_to "Voir le chambre",room_path(room) %>
+      </div>
+  <% end %>
+</div>
