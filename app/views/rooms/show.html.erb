@@ -8,9 +8,13 @@ Back to index
 <h5><%= @room.price_per_night%>$/night</h5>
 <h5><%= @room.hotel.address%></h5>
 
-<div class="container">
-  <%= simple_form_for(@booking) do |f| %>
-    <%= f.input :sarts_at, as: :date%>
-    <%= f.input :ends_at, as: :date%>
+<%#= render "form", booking: @booking %>
+
+
+  <%= simple_form_for [@room, Booking.new] do |f| %>
+  <div class="d-flex">
+    <%= f.input :sarts_at, as: :string, required: false, input_html: { id: "range_start" } %>
+    <%= f.input :ends_at, as: :string, required: false, input_html: { id: "range_end" } %>
+  </div>
+      <%= f.button :submit, "Go", class: "btn btn-primary" %>
   <% end %>
-</div>

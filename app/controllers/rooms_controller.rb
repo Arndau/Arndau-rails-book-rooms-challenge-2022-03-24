@@ -4,11 +4,11 @@ class RoomsController < ApplicationController
     @rooms = Room.all
   end
 
-def create
-  @room = Room.new(room_params)
-  @room.save
-  redirect_to rooms_path(@room)
-end
+# def create
+#   @room = Room.new(room_params)
+#   @room.save
+#   redirect_to rooms_path(@room)
+# end
 
 
   def show

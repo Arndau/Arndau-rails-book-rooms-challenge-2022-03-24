@@ -11,3 +11,12 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+@import "flatpickr/dist/flatpickr";
+@import "flatpickr/dist/themes/airbnb";
+
+.container{
+  width: 98%;
+  padding-left: 0;
+  padding-right: 0;
+}
