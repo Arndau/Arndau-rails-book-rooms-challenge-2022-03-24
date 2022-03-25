@@ -7,10 +7,13 @@ body {
   background-size: cover;
   background-size: 100% 100%;
 }
+.hometext{
 
+    margin-left: 2px;
+
+}
 h1 {
-  text-align: center;
-  padding-top: 50px;
+  text-align: left;
   font-weight: bold;
   font-weight: 1000;
 
@@ -32,19 +35,23 @@ h1 {
 }
 
 .btn-yours {
-  width: 300px;
+  width: 365px;
   height: 75px;
-  padding: 15px 30px;
+  padding: 34px 46px;
   border: none;
   outline: none;
   color: rgb(192, 102, 188);
   background: rgb(255, 255, 255);
   cursor: pointer;
-  position: relative;
+  //position: relative;
   z-index: 0;
   border-radius: 10px;
   color: #111;
-  margin-top: 50%;
+  font-weight: bold;
+  position: absolute; /* or absolute */
+  top: 42%;
+  left: 40%;
+
 }
 
 .btn-yours:before {
@@ -65,7 +72,7 @@ h1 {
 }
 
 .btn-yours:active {
-  color: rgb(255, 255, 255)
+  color: transparent; //rgb(255, 255, 255)
 }
 
 .btn-yours:active:after {
@@ -82,7 +89,7 @@ h1 {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: #111;
+  background: rgb(255, 255, 255);
   left: 0;
   top: 0;
   border-radius: 10px;
