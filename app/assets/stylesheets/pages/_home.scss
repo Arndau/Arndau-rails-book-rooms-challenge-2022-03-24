@@ -1,5 +1,95 @@
 // Specific CSS for your home-page
 
-.img{
-  object-fit:cover;
+body {
+  background-image: url('https://wallpaperaccess.com/full/123346.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-size: 100% 100%;
+}
+
+h1 {
+  text-align: center;
+  padding-top: 50px;
+  font-weight: bold;
+  font-weight: 1000;
+
+}
+
+.container-home {
+
+  text-align: center;
+  font-weight: 900;
+  font-weight: bold;
+}
+
+.home-btn {
+  background-color: #cb997e;
+  border-radius: 10px;
+  color: white;
+  margin-top: 20%;
+
+}
+
+.btn-yours {
+  width: 300px;
+  height: 75px;
+  padding: 15px 30px;
+  border: none;
+  outline: none;
+  color: rgb(192, 102, 188);
+  background: rgb(255, 255, 255);
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  color: #111;
+  margin-top: 50%;
+}
+
+.btn-yours:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.btn-yours:active {
+  color: rgb(255, 255, 255)
+}
+
+.btn-yours:active:after {
+  background: transparent;
+}
+
+.btn-yours:hover:before {
+  opacity: 1;
+}
+
+.btn-yours:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
 }
